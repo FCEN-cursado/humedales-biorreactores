@@ -8,7 +8,7 @@ library(tidyverse)
 library(ggpubr) # Facilita añadir estadísticas a los gráficos
 
 # Cargar datos
-df1 <- read.csv("tp2-datos.csv")
+df1 <- read.csv("../datos/tp2-datos.csv")
 # Convertir a factores (datos categoricos)
 df1 <- df1 %>%
   mutate(
@@ -51,25 +51,10 @@ print(letras)
 
 ####
 # COMPARACION TRATAMIENTOS TIEMPO
-ggplot(df1, aes(x = Fecha, y = pH, fill = Fecha)) +
-  stat_summary(fun = mean, geom = "bar", alpha = 0.5) +
-  stat_summary(fun.data = mean_sdl, fun.args = list(mult = 1), 
-               geom = "errorbar", width = 0.2) +
-  geom_jitter(width = 0.1, size = 2) +
-  # Aquí ocurre la magia: crea un panel por Tratamiento
-  facet_wrap(~Tratamiento, nrow = 1) + 
-  theme_bw() +
-  labs(title = "Evolución del pH por tratamiento",
-       subtitle = "Comparación Inicio vs. Final (n=3)") +
-  coord_cartesian(ylim = c(6, 9)) # Ajusta el rango del eje y para mejor visualización
-
-
-
 
 library(tidyverse)
 
 # Asegurar orden de los tiempos
-
 ggplot(df1, aes(x = Fecha, y = pH, fill = Fecha)) +
   # Barras de promedio (con transparencia)
   stat_summary(fun = mean, geom = "bar", alpha = 0.4, color = "black") +
@@ -89,7 +74,7 @@ ggplot(df1, aes(x = Fecha, y = pH, fill = Fecha)) +
         strip.background = element_rect(fill = "white"), # Títulos de facetas limpios
         panel.grid.minor = element_blank()) +
   labs(title = "Variación de pH por Tratamiento",
-       subtitle = "Rango visual optimizado (pH 6 - 10)",
+       subtitle = "Rango visual optimizado (pH 6 - 9)",
        y = "pH",
        x = NULL)
 
