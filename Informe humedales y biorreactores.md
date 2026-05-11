@@ -19,14 +19,15 @@ Hay reacciones en los humedales que pueden generar un suministro de ${PO_4}^{3-}
 En cuanto a las reacciones que mas afectan el nivel de pH se pueden mencionar la reducción de hidróxidos de hierro (de $Fe^{3+}$ a $Fe^{2+}$) y la reducción del azufre de sulfatos a sulfuro de hidrógeno (${SO_4}^{2-} \Rightarrow H_2S$), ambas producen un aumento del pH al consumir protones $H^+$ presentes en el medio acuoso.
 
 ![humedal-esquema](humedal-esquema.png)
-<sup>Imagen 1: esquema de reacciones físico-químicas en humedales.</sup>
+<sup>Figura 1: esquema de reacciones físico-químicas en humedales.</sup>
 
-En este trabajo se evaluará el potencial depurador de biorreactores que emulan las condiciones de humedales usando como vegetación hidrófita a *Typha sp* "Totora" con su sustrato natural asociado a la rizósfera donde se encuentran los microorganismos. 
+En este trabajo se busca evaluar el potencial depurador de biorreactores que emulan las condiciones de humedales usando como vegetación hidrófita a *Typha sp* "Totora" con su sustrato natural asociado a la rizósfera donde se encuentran los microorganismos. 
 Como hipótesis se plantea que en el el biorreactor se producirán reacciones similares a las que suceden en humedales, por al simular una situación de una afluencia de nitratos y fosfatos en alta concentración que deriven o se hayan filtrado de un cause de uso agrícola, el sistema será capaz de depurarlo debido a las reacciones de desnitrificación, adsorción de fosfatos en arcillas y absorción metabólica por parte de la vegetación y los microorganismos.
 Se plantean como predicciones encontrar luego de un mes:
-- La menor concentración de los fertilizantes $NO_3^-$ y ${PO_4}^{3-}$ en los biorreactores con totoras y sustrato.
-- La mayor concentración de $NO_3^-$ y ${PO_4}^{3-}$ en los tratamientos control (solo agua y fertilizante).
-- Concentración intermedia en los tratamientos que tienen solo totoras y solo sustrato.
+- En los biorreactores que simulan un humedal con totoras y sustrato se espera encontrar muy baja conductividad y concentración de fertilizantes ($NO_3^-$ y ${PO_4}^{3-}$), y valores de pH relativamente altos.
+- En el tratamiento que tiene solo totora o solo barro se espera valores intermedios de conductividad y de fertilizantes, ademas de valores de pH relativamente bajos.
+- En el tratamiento de totora se espera tener valores de pH menor que en los tratamientos de barro.
+- En el control se espera tener la mayor conductividad y concentración de $NO_3^-$ y ${PO_4}^{3-}$.
 
 ## Métodos y materiales
 - Baldes de 5L para construir biorreactores 
@@ -54,39 +55,42 @@ Como fertilizantes se usaron sales de $NO_3^-$ y ${PO_4}^{3-}$ con concentracion
 Se colocaron todos los biorreactores debajo de paneles lumínicos con un fotoperíodo de 12 horas de luz y 12 horas de oscuridad. Se marcó el nivel de liquido de cada balde luego de agregar los 2 L de fertilizantes, todas las semanas al realizar las mediciones se vuelve a rellenar con agua hasta el mismo nivel para estandarizar las mediciones y no tener diferencias de concentración debidas a diferencias en la  evapotranspiración de cada tratamiento.
 
 ![dia1.png](dia1.png)
-<sup>Imagen 2: Biorreactores al inicio del experimento</sup>
+<sup>Figura 2: Biorreactores al inicio del experimento</sup>
 El experimento duró en total 28 días, se realizaron mediciones de pH y conductividad al inicio y final del experimento, para poder realizar una coparación de cambio relativo de estas variables en cada tratamiento, esto es debido a que los diferentes sustratos afectan estas caracteristicas generando un punto de partida distinto en cada biorreactor.
-Por otra parte los tratamientos con fertilizantes parten con concentración conocida, por lo que se realizaron las determinaciones al finalizar el experiment, los nitratos se obtuvieron según por método de reducción de cadmio (Método Hach 8171) y los fosfatos por absorbancia a 880 nm en espectofotómetro HACH DR 2800.
+Por otra parte los tratamientos con fertilizantes parten con concentración conocida, por lo que se realizaron las determinaciones al finalizar el experimento, los nitratos se obtuvieron según por método de reducción de cadmio (Método Hach 8171) y los fosfatos por absorbancia a 880 nm en espectofotómetro HACH DR 2800.
 ## Resultados
+Para las mediciones de pH y conductividad, debido a que los diferentes tratamientos modifican estos valores desde el momento inicial, se calculan las diferencias entre estos valores y el análisis estadifico se realiza sobre esa variación ($\Delta pH$ y $\Delta conductividad$ ).
 <sub>Tabla 1: Resultado mediciones pH y conductividad</sub>
-![[ph-cond-delta.png]]
+![[tabla-ph-cond.png]]
+<sub>Tabla 2: Resultado determinaciones de nitratos y fosfatos finales</sub>
+![[tabla-fertis.png]]
 
-| Tratamientos | pH inicial | pH final | Δ pH | Cond. Inicial | Cond. Final | Δ Cond. |
-| ------------ | ---------- | -------- | ---- | ------------- | ----------- | ------- |
-| Barro 1      | 7.97       | 7.82     | 0.15 | 1.28          | 1.350       | 0.070   |
-| Barro 2      | 8.03       | 7.82     | 0.21 | 1.30          | 1.345       | 0.045   |
-| Barro 3      | 8.05       | 7.82     | 0.23 | 1.11          | 1.330       | 0.220   |
-| Totora 1     | 7.82       | 7.34     | 0.48 | 1.25          | 1.175       | -0.075  |
-| Totora 2     | 7.99       | 7.47     | 0.52 | 1.24          | 1.295       | 0.055   |
-| Totora 3     | 8.00       | 7.53     | 0.47 | 1.23          | 1.195       | -0.035  |
-| Humedal 1    | 7.73       | 7.54     | 0.19 | 1.31          | 1.335       | 0.025   |
-| Humedal 2    | 7.78       | 7.32     | 0.46 | 1.27          | 1.195       | -0.075  |
-| Humedal 3    | 7.78       | 7.56     | 0.22 | 1.26          | 1.460       | 0.200   |
-| Blanco 1     | 8.04       | 7.88     | 0.16 | 1.23          | 1.265       | 0.035   |
-| Blanco 2     | 8.01       | 7.88     | 0.13 | 1.25          | 1.240       | -0.010  |
-| Blanco 3     | 7.95       | 7.88     | 0.07 | 1.25          | 1.245       | -0.005  |
+Todos las mediciones de variacion de pH fueron negativas, lo que indica que en todos hubo acidificación (pH final menor que el inicial).
+Se encontraron diferencias significativas para $\Delta pH$ ($F_{3,8} = 11.59$; $p < 0.01$). Se interpreta que hay tratamientos que tuvieron mayor modificación de pH independientemente del valor inicial. Debido a este resultado, se procedió a realizar una prueba de comparación múltiple de Tukey.
+No se encontraron diferencias significativas para las variaciones de conductividad (ANOVA, $F_{3,8} = 1.214$; $p = 0.366$).
+![[graph-ph-cond.png]]
+<sup>Figura 3: cambio en los valores de pH y conductividad por tratamiento</sup>
 
-Se realizó ANOVA sobre los valores de cambio neto  ($\Delta pH$) para corregir las diferencias en las condiciones iniciales entre los sustratos.
-Se encontraron diferencias significativas en el cambio de pH ($F_{3,8} = 11.59$; $p < 0.01$). Se interpreta que hay tratamientos que tuvieron mayor modificación de pH independientemente del valor inicial. Debido a este resultado, se procedió a realizar una prueba de comparación múltiple de Tukey.
-No se encontraron diferencias significativas para las variaciones de conductividad (ANOVA $F_{3,8} = 1.214$; $p = 0.366$)
+Para el análisis de nitratos y fosfatos al iniciar todos los tratamientos con la misma concentración (100 mg/L y 20 mg/L respectivamente) se realiza ANOVA solo sobre los valores finales, se encuentran diferencias significativas en ambos casos ($NO_3^-$:$p < 0.01$; ${PO_4}^{3-}$: $p < 0.001$).
+![[fosf-niratos.png]]
+<sup>Figura 4: concentración final en mg/L de nitrato y fosfato por tratamiento</sup>
 
-![[pH-Rplot.png]] 
-![[conductividad-Rplot.png]]
-<sup>Imagen 3: cambio en los valores de pH por tratamiento</sup>
 ## Discusión
-A diferencia del pH, la conductividad eléctrica mostró un comportamiento homogéneo en todos los grupos. Esto podría indicar que los procesos de liberación o absorción de iones ocurrieron a una tasa similar en todos los tratamientos, o que la variabilidad interna de las réplicas ($n=3$) fue mayor al efecto de los sustratos sobre este parámetro.
-Sería interesante en experimentos futuros tener una comparativa con un tratamiento no palustre que simule las condiciones de un suelo promedio con un cultivo o vegetacion natural. Esto es debido a que al ser la contaminación testeada productos fertilizantes, puede suceder que el cultivo los asimile fácilmente en cuyo caso este experimento no validaría la función depuradora de los humedales. 
+El análisis de los biorreactores permitió observar dinámicas biogeoquímicas diferenciadas según la composición del tratamiento. En cuanto a la remoción de nitratos, los resultados finales muestran una eficiencia notable en los tratamientos que incluyen sustrato (Humedal y Barro), logrando concentraciones significativamente menores en comparación con el Control ($p < 0.01$). Esto sugiere que la desnitrificación bacteriana mediada por la microbiota del suelo fue el proceso predominante de remoción. Es para destacar el tratamiento de Totora (sin sustrato rizosférico) que mostró una remoción menor y más variable que el Humedal completo, lo que refuerza la idea de que la interacción planta-microorganismo-suelo es clave para la optimización del ciclo del nitrógeno.
+En el caso de los fosfatos, el tratamiento Humedal mostró una capacidad de depuración casi total, con valores finales cercanos a cero o incluso negativos, situación que puede deberse a valores por debajo del límite de detección y/o errores en la curva de calibración. Dado que el tratamiento "Barro" también mostró niveles bajos ($~1.1$ mg/L) en comparación con el blanco, se confirma la importancia de los procesos físico-químicos de adsorción en arcillas. Sin embargo, la mayor eficiencia del biorreactor humedal sugiere que la asimilación biológica por parte de _Typha sp._ complementa la retención física del sustrato. Un resultado llamativo fue la mayor concentración de fosfatos en el tratamiento de totora en comparación con el barro, esto podría deberse a la ausencia de sitios de adsorción minerales (arcillas) y a una posible liberación de fósforo por parte de los tejidos vegetales tras el estrés del trasplante y lavado de raíces.
+Respecto al pH, se observó una acidificación significativa en los tratamientos con vegetación (Totora y Humedal). Esta tendencia hacia la acidez puede atribuirse a la respiración radicular que libera $CO_2$ que en medio acuoso se convierte en ácido carbónico y luego en bicarbonato liberando protones: $CO_2 + H_2O \rightleftharpoons H_2CO_3 \rightleftharpoons HCO_3^- + H^+$, a lo que se suma la exudación de ácidos orgánicos por las raíces de las totoras. En este sentido se cumple la predicción de que el tratamiento Totora tiene menor pH que Barro, pero no se cumple que Humedal tenga pH relativamente alto, por lo tanto de la actividad vegetal en este experimento parace haber tenido mas influencia en el pH que las reacciones qumicas del sustrato que podrian haber alcalinizado el medio.
+Finalmente, la conductividad eléctrica no mostró diferencias significativas entre grupos ($p = 0.366$). Esto es posible que se deba a la baja precisión de las mediciones, que genera una gran variabilidad dentro de cada tratamiento.si bien hubo remoción de nutrientes ($NO_3^-$ y $PO_4^{3-}$), otros procesos como la liberación de iones desde el sustrato compensaron la disminución de sales disueltas, manteniendo la fuerza iónica del medio relativamente constante en todos los biorreactores.
+Sería interesante en experimentos futuros incluir un tratamiento no palustre que simule las condiciones de un suelo promedio con un cultivo o vegetación natural, dado que al utilizar fertilizantes como contaminantes, existe la posibilidad de que cualquier cultivo los asimile eficientemente, lo que limitaría la validez de este experimento como demostración específica de la función depuradora de los humedales. Asimismo, aumentar el número de réplicas permitiría reducir la variabilidad observada especialmente en el tratamiento Totora, y el seguimiento temporal de las concentraciones podría esclarecer la cinética de los procesos de remoción.
+## Conclusiones
+Los biorreactores construidos para emular las condiciones de un humedal demostraron una capacidad depuradora significativa para nitratos y fosfatos luego de 28 días de experimento. El tratamiento Humedal que combinó tierra arcillosa, *Typha sp.* y la microbiota de la rizósfera fue el más efectivo en la remoción de ambos nutrientes, reduciendo las concentraciones por debajo de los límites aceptables para consumo humano. Esto apoya la hipótesis central del trabajo respecto al potencial depurador de sistemas que replican humedales.
+La remoción de nitratos estuvo asociada principalmente al sustrato y su microbiota, coherente con procesos de desnitrificación anaeróbica, mientras que la remoción de fosfatos pareció depender de la adsorción en arcillas favorecida por la actividad microbiana. El tratamiento con solo totoras no resultó equivalente al tratamiento completo, evidenciando que la presencia de microorganismos de la rizósfera es un componente esencial del sistema.
+La conductividad no mostró diferencias entre tratamientos, mientras que el pH sí varió significativamente, siendo el tratamiento Totora el que mayor acidificación relativa produjo. No todas las predicciones planteadas inicialmente se cumplieron, en particular las relacionadas al comportamiento del pH, lo que señala la complejidad de los procesos simultáneos que operan en estos sistemas y la necesidad de experimentos complementarios para desentrañar la contribución individual de cada componente biótico y abiótico.
 
+## Referencias
+Hernández, M. E. (2018). Las bacterias metanotróficas y desnitrificantes en humedales de agua dulce en México: sus implicaciones en los servicios ambientales. En _Diversidad microbiana asociada a la tecnología avanzada para el tratamiento de agua residual urbana e industrial. Avances recientes y propuestas futuras_ (pp. 60–75).
 
-::: {#refs}
-:::
+Ley 18284. (2018, mayo 7). _Código Alimentario Argentino_. Argentina.gob.ar. [https://www.argentina.gob.ar/anmat/codigoalimentario](https://www.argentina.gob.ar/anmat/codigoalimentario)
+
+Plaza de los Reyes del Río, C., Vera, L., Vidal, G., Salvato, M., & Borin, M. (2011). Consideraciones para la eliminación del nitrógeno en humedales artificiales. _Tecnología del agua_, _31_(330), 40–49. [https://dialnet.unirioja.es/servlet/articulo?codigo=3694962](https://dialnet.unirioja.es/servlet/articulo?codigo=3694962)
+
+Schlesinger, W. H. (2013). _Biogeochemistry: an analysis of global change_ (3rd ed.). Elsevier Inc.

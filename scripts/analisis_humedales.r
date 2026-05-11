@@ -8,7 +8,9 @@ library(tidyverse)
 library(ggpubr) # Facilita añadir estadísticas a los gráficos
 
 # Cargar datos
-df1 <- read.csv("../datos/tp2-datos.csv")
+df1 <- read.csv("../data/tp2-datos.csv")
+view(df1)
+
 # Convertir a factores (datos categoricos)
 df1 <- df1 %>%
   mutate(
@@ -44,17 +46,18 @@ print(test_tukey)
 # Graficar comparaciones de Tukey
 plot(test_tukey)
 
-library(multcompView)
 # Obtener las letras de tratamientos con diferencias significativas
+library(multcompView)
 letras <- multcompLetters4(modelo_ph, test_tukey)
 print(letras)
 
-####
-# COMPARACION TRATAMIENTOS TIEMPO
 
+# -----
+# DELTAS: VARIACION TEMPORAL
+# ------
 library(tidyverse)
 
-# Asegurar orden de los tiempos
+# Grafico gral pH antes y despues
 ggplot(df1, aes(x = Fecha, y = pH, fill = Fecha)) +
   # Barras de promedio (con transparencia)
   stat_summary(fun = mean, geom = "bar", alpha = 0.4, color = "black") +
@@ -78,8 +81,112 @@ ggplot(df1, aes(x = Fecha, y = pH, fill = Fecha)) +
        y = "pH",
        x = NULL)
 
+# ---------
+## ANALISIS delta PH
+# --------
+library(tidyverse)
+
+df_delta = read.csv("../data/deltas.csv")
+df_delta = read.csv("./data/deltas.csv")
+view(df_delta)
+
+# 2. Correr el ANOVA sobre el Delta
+modelo_delta_ph <- aov(pH_dif ~ Tratamiento, data = df_delta)
+summary(modelo_delta_ph)
+
+# 3. Prueba de Tukey para ver quién cambió MÁS
+tukey_delta_ph <- TukeyHSD(modelo_delta_ph)
+phtuk = as.data.frame(tukey_delta_ph[1])
+
+library(multcompView)
+letras_ph <- multcompLetters4(modelo_delta_ph, tukey_delta_ph)
+print(letras_ph)
 
 
+par(mfrow = c(2,2))
+
+# Gráfico del Delta de pH por tratamiento
+ggplot(df_delta, aes(x = Tratamiento, y = pH_dif, fill = Tratamiento)) +
+  # Línea de referencia en cero (donde todos empezaron)
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  # Barras de promedio del cambio
+  stat_summary(fun = mean, geom = "bar", alpha = 0.6) +
+  # Error estándar o Desviación
+  stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.2) +
+  # Las 3 réplicas reales
+  geom_jitter(width = 0.1, size = 3, shape = 21, color = "black") +
+  theme_minimal() +
+  labs(title = "Magnitud del cambio de pH por Tratamiento",
+       y = "Delta pH (Final - Inicio)") +
+  theme(legend.position = "none")
 
 
+####
+## Analisis conductividad
+####
+modelo_delta_conduct = aov(Conduct_dif ~ Tratamiento, data = df_delta)
+summary(modelo_delta_conduct)
+# Gráfico conductividad
+ggplot(df_delta, aes(x = Tratamiento, y = Conduct_dif, fill = Tratamiento)) +
+  # Línea de referencia en cero (donde todos empezaron)
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red") +
+  # Barras de promedio del cambio
+  stat_summary(fun = mean, geom = "bar", alpha = 0.6) +
+  # Error estándar o Desviación
+  stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.2) +
+  # Las 3 réplicas reales
+  geom_jitter(width = 0.1, size = 3, shape = 21, color = "black") +
+  theme_minimal() +
+  labs(title = "Magnitud del cambio de conductividad por Tratamiento",
+       y = "Delta conductividad (Final - Inicio)") +
+  theme(legend.position = "none")
+
+
+###
+# NITRATOS Y FOSFATOS
+###
+
+modelo_nitratos <- aov(Nitratos ~ Tratamiento, data = df_delta)
+summary(modelo_nitratos)
+tukey_nitratos <- TukeyHSD(modelo_nitratos)
+letras_nitratos <- multcompLetters4(modelo_nitratos, tukey_nitratos)
+print(letras_nitratos)
+
+
+ggplot(df_delta, aes(x = Tratamiento, y = Nitratos, fill = Tratamiento)) +
+  # Barras de promedio
+  stat_summary(fun = mean, geom = "bar", alpha = 0.6) +
+  # Barras de error (Error Estándar)
+  stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.2) +
+  # Puntos de las 3 réplicas
+  geom_jitter(width = 0.1, size = 3, shape = 21, color = "black", alpha = 0.8) +
+  # Estética
+  theme_minimal() +
+  #scale_fill_brewer(palette = "Set2") + # Colores distintos para nutrientes
+  labs(title = "Concentración Final de Nitratos por Tratamiento",
+       y = "Nitratos (mg/L)", 
+       x = "Tratamiento") +
+  theme(legend.position = "none")
+
+
+modelo_fosfatos <- aov(Fosfatos ~ Tratamiento, data = df_delta)
+summary(modelo_fosfatos)
+tukey_fosfatos <- TukeyHSD(modelo_fosfatos)
+letras_fosfatos <- multcompLetters4(modelo_fosfatos, tukey_fosfatoss)
+print(letras_fosfatos)
+
+ggplot(df_delta, aes(x = Tratamiento, y = Fosfatos, fill = Tratamiento)) +
+  # Barras de promedio
+  stat_summary(fun = mean, geom = "bar", alpha = 0.6) +
+  # Barras de error (Error Estándar)
+  stat_summary(fun.data = mean_se, geom = "errorbar", width = 0.2) +
+  # Puntos de las 3 réplicas
+  geom_jitter(width = 0.1, size = 3, shape = 21, color = "black", alpha = 0.8) +
+  # Estética
+  theme_minimal() +
+  #scale_fill_brewer(palette = "Set2") + # Colores distintos para nutrientes
+  labs(title = "Concentración Final de Fosfatos por Tratamiento",
+       y = "Fosfatos (mg/L)", 
+       x = "Tratamiento") +
+  theme(legend.position = "none")
 
