@@ -1,0 +1,11 @@
+{
+  "blue-topaz-theme@@color-scheme-options": "color-scheme-options-pink-topaz",
+  "blue-topaz-theme@@toggle-paragraph-spacing": true,
+  "blue-topaz-theme@@paragraph-spacing": 1.5,
+  "blue-topaz-theme@@justify-align": true,
+  "blue-topaz-theme@@table-format-options": "default-table",
+  "blue-topaz-theme@@show-border-table": true,
+  "blue-topaz-theme@@table-style-options": "table-style-default",
+  "blue-topaz-theme@@obsidian-default-image": true,
+  "blue-topaz-theme@@image-border": true
+}

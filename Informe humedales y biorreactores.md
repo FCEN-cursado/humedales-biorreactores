@@ -1,26 +1,24 @@
 ---
-cssclasses:
 bibliography: /home/ivan.fed/Zotero/bibliotecas/Biogeoquimica.json
-reference-section-title: Bibliografía
 csl: /home/ivan.fed/Zotero/styles/apa.csl
+reference-section-title: Referencias
 ---
- ![logo-fcen.png](../assets/logo-fcen.png) ![BGQ-logo.png|162](../assets/BGQ-logo.png)
+![logo-fcen.png](../assets/logo-fcen.png) ![BGQ-logo.png|162](../assets/BGQ-logo.png)
 # Humedales y evaluación de biorreactores
 
 Garcia Escobar, Iván Maximiliano¹\*
 _¹Facultad de Ciencias Exactas y Naturales, Universidad Nacional de Cuyo, Mendoza 5500, Argentina_
 \*ivangarescobar@gmail.com
 Fecha: 30/04/2026
-## Introducción
 
-Los humedales son ecosistemas caracterizados por tener agua en la superficie o cerca de ella durante al menos una parte del año, lo que genera suelos hídricos que presentan condiciones de anoxia de forma intermitente o permanente [@SchlesingerBiogeochemistry]. 
-Las condiciones de inundación y saturación del suelo genera algunas características como acumulación de materia orgánica y amplios gradientes de oxido-reducción, en estas condiciones las interacciones entre suelos hídricos, plantas hidrófitas y microorganismos asociados producen una variedad de transformaciones químicas en el sustrato [@hernandezBacteriasHumedales2018]. 
+## Introducción
+Los humedales son ecosistemas caracterizados por tener agua en la superficie o cerca de ella durante al menos una parte del año, lo que genera suelos hídricos que presentan condiciones de anoxia de forma intermitente o permanente [@SchlesingerBiogeochemistry]. Las condiciones de inundación y saturación del suelo genera algunas características como acumulación de materia orgánica y amplios gradientes de oxido-reducción, en estas condiciones las interacciones entre suelos hídricos, plantas hidrófitas y microorganismos asociados producen una variedad de transformaciones químicas en el sustrato [@hernandezBacteriasHumedales2018]. 
 Entre las transformaciones químicas se pueden mencionar la nitrificación aeróbica (en zonas oxigenadas como la superficie y raíces) seguida de desnitrificación anaeróbica donde algunas bacterias utilizan el nitrato ($NO_3^-$) como aceptor final de electrones al oxidar la materia orgánica reduciéndolo a nitrógeno elemental y oxido nitroso ($N_2$​ y $N​_2O$). Además el $NO_3^-$ es asimilado metabólicamente por las plantas y otros microorganismos [@plazadelosreyesdelrioConsideraciones2011]. 
 En cuando a la dinámica del fósforo se produce el fenómeno físico de adsorción, que implica la retención (y liberación según las condiciones) al formar un complejo con las arcillas del suelo. Las arcillas tienen carga negativa superficial que atrae cationes y estos interactúan con aniones, en particular con los fosfatos (${PO_4}^{3-}$) que son los aniones de mayor afinidad de adsorción [@SchlesingerBiogeochemistry]. El ${PO_4}^{3-}$ también es asimilado por plantas y microorganismos para sus funciones metabólicas.
 Hay reacciones en los humedales que pueden generar un suministro de ${PO_4}^{3-}$ en  suelos que tienen una composición alta de hidróxidos de hierro y aluminio, al producirse la reducción de estos minerales en condiciones de anoxia se genera la liberación de iones ${PO_4}^{3-}$ al medio.
 En cuanto a las reacciones que mas afectan el nivel de pH se pueden mencionar la reducción de hidróxidos de hierro (de $Fe^{3+}$ a $Fe^{2+}$) y la reducción del azufre de sulfatos a sulfuro de hidrógeno (${SO_4}^{2-} \Rightarrow H_2S$), ambas producen un aumento del pH al consumir protones $H^+$ presentes en el medio acuoso. Por otro lado la respiración radicular que libera $CO_2$ en medio acuoso se convierte en ácido carbónico y luego en bicarbonato liberando protones: $CO_2 + H_2O \rightleftharpoons H_2CO_3 \rightleftharpoons HCO_3^- + H^+$ lo que que reduce el pH. 
 
-![humedal-esquema](humedal-esquema.png)
+![humedal-esquema](assets/humedal-esquema.png)
 <sup>Figura 1: esquema de reacciones físico-químicas en humedales.</sup>
 
 En este trabajo se busca evaluar el potencial depurador de biorreactores que emulan las condiciones de humedales usando como vegetación hidrófita a *Typha sp* "Totora" con su sustrato natural asociado a la rizósfera donde se encuentran los microorganismos. 
@@ -56,16 +54,16 @@ Como fertilizantes se usaron sales de $NO_3^-$ y ${PO_4}^{3-}$ con concentracion
 
 Se colocaron todos los biorreactores debajo de paneles lumínicos con un fotoperíodo de 12 horas de luz y 12 horas de oscuridad (manteniendo el fotoperíodo natural en el que estaban). Se marcó el nivel de liquido de cada balde luego de agregar los 2 L de fertilizantes, todas las semanas se vuelve a rellenar con agua hasta el mismo nivel para estandarizar las mediciones y no tener diferencias de concentración debidas a diferencias en la  evapotranspiración de cada tratamiento.
 
-![dia1.png](dia1.png)
+![dia1.png](../assets/dia1.png)
 <sup>Figura 2: Biorreactores al inicio del experimento</sup>
 El experimento duró en total 28 días, se realizaron mediciones de pH y conductividad al inicio y final del experimento, para poder realizar una comparación de cambio relativo de estas variables, esto es debido a que los diferentes sustratos afectan estas características generando un punto de partida distinto en cada biorreactor.
 Por otra parte los tratamientos con fertilizantes parten con concentración conocida, por lo que se realizaron las determinaciones al finalizar el experimento, los nitratos se obtuvieron por método de reducción de cadmio (Método Hach 8171) y los fosfatos por absorbancia a 880 nm en espectofotómetro HACH DR 2800.
 ## Resultados
 Para las mediciones de pH y conductividad, debido a las diferencias de partida influenciadas por cada tratamiento, se calculan las diferencias entre estos valores y el análisis estadifico se realiza sobre esa variación ($\Delta pH$ y $\Delta conductividad$ ).
 
-<sub>Tabla 1: Resultado mediciones pH y conductividad</sub>
+<sub>Tabla 1: Resultado mediciones pH y conductividad</sub> 
 ![tabla-ph-cond](assets/tabla-ph-cond.png)
-<sub>Tabla 2: Resultado determinaciones de nitratos y fosfatos finales</sub>
+<sub>Tabla 2: Resultado determinaciones de nitratos y fosfatos finales</sub> 
 ![tabla-fertis](assets/tabla-fertis.png)
 
 Todas las mediciones de variacion de pH fueron negativas, lo que indica que en todos hubo acidificación (pH final menor que el inicial).
